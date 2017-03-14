@@ -1,0 +1,17 @@
+.MetricsBar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  background: white;
+  /*background-image: linear-gradient(to bottom, #ffd532, #ffb500);*/
+  /*background-image: linear-gradient(rgb(251, 203, 13), rgb(236, 174, 20));*/
+  border-bottom: 1px solid #eaeaea;
+  /*border-bottom: 2px solid #6b6b6b;*/
+}
+
+/*.MetricsBar .StoryDropdown--label:hover {
+  border-color: rgb(226, 180, 0);
+  background: linear-gradient(rgb(226, 180, 0), rgb(214, 159, 26));*/
+/*}*/
+
+/*> .Story > .StoryDropdown >*/

@@ -1,0 +1,50 @@
+.globe-svg {
+  padding-left: 120px;
+  padding-top: 45px;
+}
+
+.country {
+  fill: #a2a0a0;
+  stroke: #fff;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectMap {
+  display: inline-flex;
+  margin: 18px;
+}
+
+.selectMap--element {
+  font-family: Verdana;
+  font-size: 12px;
+  color: #545454;
+  font-weight: normal;
+  padding: 3px;
+  margin: 0 4px;
+  border: 1px solid transparent;
+}
+
+.selectMap--element:hover {
+  background-color: #efefef;
+  border-color: #efefef;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.selectMap--line {
+  margin: 0 8px;
+  color: #545454;
+  height: 100%;
+}
+
+.selectMap--element:first-child {
+  font-weight: bold;
+}

@@ -1,0 +1,16 @@
+.MetricsWrapper {
+  height: 100% ;
+}
+
+.Metrics {
+  height: calc(100% - 130px);
+  display: flex;
+  flex-direction: row;
+}
+
+.Metrics--content-right {
+  order: 2;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
