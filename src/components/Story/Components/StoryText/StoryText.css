@@ -1,0 +1,13 @@
+.StoryText {
+  font-family: Verdana;
+  font-size: 12px;
+  color: #545454;
+  font-weight: normal;
+  padding: 6px 4px;
+  transition:All 0.19s ease;
+  line-height: 0.9;
+}
+
+.StoryText:last-child {
+  padding-left: 0px;
+}

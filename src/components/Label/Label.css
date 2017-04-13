@@ -1,0 +1,14 @@
+.Label {
+  font-family: Verdana;
+  font-size: 12px;
+  color: #545454;
+  font-weight: bold;
+  padding: 6px 13px;
+  /*position: absolute;
+  left: 0;
+  z-index: 0;*/
+  /*background-image: linear-gradient(to bottom, #ffd532, #ffb500);*/
+  /*background-image: linear-gradient(to right, #2196F3, #1274c3);*/
+  transition:All 0.19s ease;
+  transform: translate(10px);
+}

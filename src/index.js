@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
-import Root from './containers/App/Root/Root';
+import Root from './containers/App/Root';
+
+document.title = 'neons.io';
 
 const element = React.createElement(
   Provider, {

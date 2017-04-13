@@ -1,10 +1,10 @@
 import React from 'react';
 import { Router, Route, hashHistory } from 'react-router';
-import Dashboard from '../../Dashboard/Dashboard';
+import Main from './Main';
 
 const Root = () => (
   <Router history={hashHistory}>
-    <Route path="/" component={Dashboard} />
+    <Route path="/" component={Main} />
   </Router>
 );
 
