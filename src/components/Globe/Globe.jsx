@@ -44,7 +44,7 @@ class Globe extends React.Component {
       continents: [],
     };
 
-    this.projection = d3.geoEquirectangular().scale(180).rotate([352, 0, 0]);
+    this.projection = d3.geoEquirectangular().scale(180).rotate([356, 0, 0]);
     this.geoPath = d3.geoPath().projection(this.projection);
   }
 
@@ -58,7 +58,6 @@ class Globe extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.width !== this.props.width || nextProps.height !== this.props.height) {
-      console.log('rerender');
       this.actualHeight = nextProps.height - nextProps.margin.top - nextProps.margin.bottom;
       this.actualWidth = nextProps.width - nextProps.margin.left - nextProps.margin.right;
     }
@@ -76,7 +75,12 @@ class Globe extends React.Component {
               <stop offset="95%" stopColor="#ffd532" />
             </linearGradient>
           </defs>
-          <g className="country" width={this.actualWidth} height={this.actualHeight}>
+          <g
+            transform="translate(65, 35)"
+            className="country"
+            width={this.actualWidth}
+            height={this.actualHeight}
+          >
             {
               continents.map(c => (
                 <path

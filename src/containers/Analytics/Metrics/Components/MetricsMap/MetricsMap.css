@@ -1,5 +1,10 @@
 .MetricsMap {
-  height: 70%;
+  height: calc(100vh - 130px - 25vh);
+  min-height: calc(100vh - 130px - 200px);
   border-left: 2px solid #6b6b6b;
-  /*border-left: 1px solid #eaeaea;*/
+}
+
+.MetricsMap .globe-svg {
+  position: absolute;
+  left: 28vw;
 }

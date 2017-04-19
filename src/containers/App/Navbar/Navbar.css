@@ -4,17 +4,7 @@
   flex-basis: auto;
   flex-wrap: nowrap;
   height: 50px;
+  min-height: 50px;
   align-items: center;
-  /*border-bottom: 1px solid #eaeaea;*/
   border-bottom: 2px solid #6b6b6b;
-}
-
-.change-app {
-  background-color: #6b6b6b;
-  height: 100%;
-  font-family: Verdana;
-  font-size: 13px;
-  color: #ffbf10;
-  font-weight: bold;
-  padding: 16px;
 }
