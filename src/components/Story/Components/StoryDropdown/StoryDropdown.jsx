@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import './StoryDropdown.css';
-import '../../../../../node_modules/react-select/dist/react-select.css';
 
 class StoryDropdown extends React.Component {
   constructor(props, state) {
