@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import './Button.css';
 
-const Button = ({ value, onClick, className }) => {
+const Button = ({ text, onClick, className }) => {
   const classes = `Button ${className}`;
 
-  return <button className={classes} onClick={onClick}>{value}</button>;
+  return <button className={classes} onClick={onClick}>{text}</button>;
 };
 
 Button.defaultProps = {
@@ -12,7 +12,7 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  value: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   className: PropTypes.string,
 };

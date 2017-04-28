@@ -1,15 +1,8 @@
-.globe-svg {
-  padding-left: 120px;
-  padding-top: 45px;
-}
-
 .country {
   fill: #a2a0a0;
   stroke: #fff;
   stroke-width: .5px;
   stroke-linejoin: round;
-  position: relative;
-  transform: translate(-50%, -50%);
 }
 
 .legend {

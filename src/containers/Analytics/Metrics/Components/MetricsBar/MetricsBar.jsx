@@ -1,4 +1,5 @@
 import React from 'react';
+import MetricsBarSegmentStory from './Components/MetricsBarStorySegment/MetricsBarStorySegment';
 import Story from '../../../../../components/Story/Story';
 import StoryDropdown from '../../../../../components/Story/Components/StoryDropdown/StoryDropdown';
 import StoryText from '../../../../../components/Story/Components/StoryText/StoryText';
@@ -10,7 +11,12 @@ const MetricsBar = ({ segment, segments, setSegment }) => {
     label: s.text,
   }));
 
-  const mappedFromOptions = [{
+  const mappedLocationOptions = [{
+    value: 'world',
+    label: 'all over the world',
+  }];
+
+  const mappedFromDateOptions = [{
     value: 'soon',
     label: '1 Apr',
   }];
@@ -23,14 +29,20 @@ const MetricsBar = ({ segment, segments, setSegment }) => {
   return (
     <div className="MetricsBar">
       <Story>
-        <StoryDropdown
+        <MetricsBarSegmentStory
           options={mappedSegmentOptions}
           onChange={setSegment}
           active={segment}
         />
         <StoryText text="from" />
         <StoryDropdown
-          options={mappedFromOptions}
+          options={mappedLocationOptions}
+          onChange={() => {}}
+          active="world"
+        />
+        <StoryText text="from" />
+        <StoryDropdown
+          options={mappedFromDateOptions}
           onChange={() => {}}
           active="soon"
         />
