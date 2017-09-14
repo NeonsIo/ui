@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchListDataAction } from '../../../../../actions/Analytics/metrics';
+import { fetchListData } from '../../../../../actions/Analytics/metrics';
 import MetricsList from './MetricsList';
 
 const mapStateToProps = state => ({
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchListDataAction: bindActionCreators(fetchListDataAction, dispatch),
+  fetchListData: bindActionCreators(fetchListData, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MetricsList);

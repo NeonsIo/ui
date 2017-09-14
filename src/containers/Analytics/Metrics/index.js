@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchSegmentsAction } from '../../../actions/Analytics/metrics';
+import { fetchSegments } from '../../../actions/Analytics/metrics';
 import Metrics from './Metrics';
 
 const mapStateToProps = state => ({
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchSegmentsAction: bindActionCreators(fetchSegmentsAction, dispatch),
+  fetchSegments: bindActionCreators(fetchSegments, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Metrics);

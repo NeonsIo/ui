@@ -18,8 +18,8 @@ class Main extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchProductsAction();
-    this.props.fetchWebsitesAction();
+    this.props.fetchProducts();
+    this.props.fetchWebsites();
   }
 
   setProduct(product) {
@@ -68,8 +68,8 @@ Main.defaultProps = {
   productsLoaded: false,
   websites: [],
   websitesLoaded: false,
-  fetchProductsAction: () => {},
-  fetchWebsitesAction: () => {},
+  fetchProducts: () => {},
+  fetchWebsites: () => {},
 };
 
 Main.propTypes = {
@@ -77,8 +77,8 @@ Main.propTypes = {
   websites: React.PropTypes.arrayOf(React.PropTypes.object),
   productsLoaded: React.PropTypes.bool,
   websitesLoaded: React.PropTypes.bool,
-  fetchProductsAction: React.PropTypes.func,
-  fetchWebsitesAction: React.PropTypes.func,
+  fetchProducts: React.PropTypes.func,
+  fetchWebsites: React.PropTypes.func,
 };
 
 export default Main;

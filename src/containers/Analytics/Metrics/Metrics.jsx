@@ -2,7 +2,6 @@ import React from 'react';
 import MetricsBar from './Components/MetricsBar/MetricsBar';
 import MetricsChart from './Components/MetricsChart';
 import MetricsList from './Components/MetricsList';
-import MetricsMap from './Components/MetricsMap/MetricsMap';
 import './Metrics.css';
 
 class Metrics extends React.Component {
@@ -17,7 +16,7 @@ class Metrics extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchSegmentsAction(this.props.website);
+    this.props.fetchSegments(this.props.website);
   }
 
   setSegment(item) {
@@ -36,7 +35,6 @@ class Metrics extends React.Component {
           <MetricsList segment={this.state.segment} />
           <div className="Metrics--content-right">
             <MetricsChart segment={this.state.segment} />
-            <MetricsMap />
           </div>
         </div>
       </div>
@@ -48,14 +46,14 @@ Metrics.defaultProps = {
   segments: [],
   website: null,
   segmentsLoaded: false,
-  fetchSegmentsAction: () => {},
+  fetchSegments: () => {},
 };
 
 Metrics.propTypes = {
   website: React.PropTypes.string,
   segments: React.PropTypes.arrayOf(React.PropTypes.object),
   segmentsLoaded: React.PropTypes.bool,
-  fetchSegmentsAction: React.PropTypes.func,
+  fetchSegments: React.PropTypes.func,
 };
 
 export default Metrics;

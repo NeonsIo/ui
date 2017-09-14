@@ -1,19 +1,19 @@
 import * as actionTypes from '../../constants/actionTypes';
 
-export const fetchProductsRequest = () => ({
+export const fetchProductsRequestAction = () => ({
   type: actionTypes.FETCH_PRODUCTS_REQUEST,
 });
 
-export const fetchProductsSuccess = products => ({
+export const fetchProductsSuccessAction = products => ({
   type: actionTypes.FETCH_PRODUCTS_SUCCESS,
   products,
 });
 
-export const fetchWebsitesRequest = () => ({
+export const fetchWebsitesRequestAction = () => ({
   type: actionTypes.FETCH_WEBSITES_REQUEST,
 });
 
-export const fetchWebsitesSuccess = websites => ({
+export const fetchWebsitesSuccessAction = websites => ({
   type: actionTypes.FETCH_WEBSITES_SUCCESS,
   websites,
 });
@@ -37,12 +37,12 @@ const websitesMock = [
   },
 ];
 
-export const fetchProductsAction = () => ((dispatch) => {
-  dispatch(fetchProductsRequest());
-  dispatch(fetchProductsSuccess(productsMock));
+export const fetchProducts = () => ((dispatch) => {
+  dispatch(fetchProductsRequestAction());
+  dispatch(fetchProductsSuccessAction(productsMock));
 });
 
-export const fetchWebsitesAction = () => ((dispatch) => {
-  dispatch(fetchWebsitesRequest());
-  dispatch(fetchWebsitesSuccess(websitesMock));
+export const fetchWebsites = () => ((dispatch) => {
+  dispatch(fetchWebsitesRequestAction());
+  dispatch(fetchWebsitesSuccessAction(websitesMock));
 });

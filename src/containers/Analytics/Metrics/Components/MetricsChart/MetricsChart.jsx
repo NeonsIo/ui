@@ -18,7 +18,7 @@ class MetricsChart extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchChartDataAction(this.props.segment);
+    this.props.fetchChartData(this.props.segment);
   }
 
   componentDidMount() {
@@ -59,14 +59,14 @@ class MetricsChart extends React.Component {
 MetricsChart.defaultProps = {
   chartData: [],
   chartDataLoaded: false,
-  fetchChartDataAction: () => {},
+  fetchChartData: () => {},
   segment: null,
 };
 
 MetricsChart.propTypes = {
   chartData: React.PropTypes.arrayOf(React.PropTypes.object),
   chartDataLoaded: React.PropTypes.bool,
-  fetchChartDataAction: React.PropTypes.func,
+  fetchChartData: React.PropTypes.func,
   segment: React.PropTypes.string,
 };
 

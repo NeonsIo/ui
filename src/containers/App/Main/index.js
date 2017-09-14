@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchWebsitesAction, fetchProductsAction } from '../../../actions/App/main';
+import { fetchWebsites, fetchProducts } from '../../../actions/App/main';
 import Main from './Main';
 
 const mapStateToProps = state => ({
@@ -11,8 +11,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchProductsAction: bindActionCreators(fetchProductsAction, dispatch),
-  fetchWebsitesAction: bindActionCreators(fetchWebsitesAction, dispatch),
+  fetchProducts: bindActionCreators(fetchProducts, dispatch),
+  fetchWebsites: bindActionCreators(fetchWebsites, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);

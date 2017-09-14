@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchChartDataAction } from '../../../../../actions/Analytics/metrics';
+import { fetchChartData } from '../../../../../actions/Analytics/metrics';
 import MetricsChart from './MetricsChart';
 
 const mapStateToProps = state => ({
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchChartDataAction: bindActionCreators(fetchChartDataAction, dispatch),
+  fetchChartData: bindActionCreators(fetchChartData, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MetricsChart);

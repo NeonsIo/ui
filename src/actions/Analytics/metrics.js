@@ -1,11 +1,11 @@
 import * as actionTypes from '../../constants/actionTypes';
 
-export const fetchSegmentsRequest = website => ({
+export const fetchSegmentsRequestAction = website => ({
   type: actionTypes.FETCH_SEGMENTS_REQUEST,
   website,
 });
 
-export const fetchSegmentsSuccess = segments => ({
+export const fetchSegmentsSuccessAction = segments => ({
   type: actionTypes.FETCH_SEGMENTS_SUCCESS,
   segments,
 });
@@ -23,29 +23,28 @@ const segmentsMock = [
   },
 ];
 
-export const fetchSegmentsAction = website => ((dispatch) => {
-  dispatch(fetchSegmentsRequest(website));
-  dispatch(fetchSegmentsSuccess(segmentsMock));
+export const fetchSegments = website => ((dispatch) => {
+  dispatch(fetchSegmentsRequestAction(website));
+  dispatch(fetchSegmentsSuccessAction(segmentsMock));
 });
 
-
-export const startFetchingChartData = segment => ({
+export const startFetchingChartDataAction = segment => ({
   type: actionTypes.FETCH_CHART_DATA_REQUEST,
   segment,
 });
 
-export const fetchChartData = (chartData, segment) => ({
+export const fetchChartDataAction = (chartData, segment) => ({
   type: actionTypes.FETCH_CHART_DATA_SUCCESS,
   chartData,
   segment,
 });
 
-export const startFetchingListData = segment => ({
+export const startFetchingListDataAction = segment => ({
   type: actionTypes.FETCH_LIST_DATA_REQUEST,
   segment,
 });
 
-export const fetchListData = (listData, segment) => ({
+export const fetchListDataAction = (listData, segment) => ({
   type: actionTypes.FETCH_LIST_DATA_SUCCESS,
   listData,
   segment,
@@ -214,12 +213,12 @@ export const listDataMock = [
   },
 ];
 
-export const fetchChartDataAction = segment => ((dispatch) => {
-  dispatch(startFetchingChartData(segment));
-  dispatch(fetchChartData(chartDataMock, segment));
+export const fetchChartData = segment => ((dispatch) => {
+  dispatch(startFetchingChartDataAction(segment));
+  dispatch(fetchChartDataAction(chartDataMock, segment));
 });
 
-export const fetchListDataAction = segment => ((dispatch) => {
-  dispatch(startFetchingListData(segment));
-  dispatch(fetchListData(listDataMock, segment));
+export const fetchListData = segment => ((dispatch) => {
+  dispatch(startFetchingListDataAction(segment));
+  dispatch(fetchListDataAction(listDataMock, segment));
 });
